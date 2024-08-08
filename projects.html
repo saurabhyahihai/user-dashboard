@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Projects Panel | JLUG</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body {font-family: "Roboto", sans-serif}
+                .w3-bar-block .w3-bar-item {
+                padding: 16px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="w3-sidebar w3-bar-block w3-collapse w3-animate-left w3-card" style="z-index:3;width:250px;" id="navigation">
+            <a class="w3-bar-item w3-border-bottom w3-large" href="#"><img src="lib/jlug.jpg" style="width:100%;"></a>
+            <a class="w3-bar-item w3-button w3-hide-large w3-large" href="javascript:void(0)" onclick="w3_close()">Close <i class="fa fa-remove"></i></a>
+            <a class="w3-bar-item w3-button" href="index.html">Home</a>
+            <a class="w3-bar-item w3-button" href="profile.html">Profile</a>
+            <a class="w3-bar-item w3-button w3-light-gray" href="#">Projects</a>
+            <a class="w3-bar-item w3-button" href="status.html">Status</a>
+            <a class="w3-bar-item w3-button" href="help.html">Help</a>
+          </nav>
+
+          <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="nav_close()" style="cursor:pointer" id="overlay"></div>
+
+          <div class="w3-main" style="margin-left:250px;">
+
+            <div id="top-area" class="w3-container w3-top w3-large w3-black">
+                <p><i class="fa fa-bars w3-button w3-light-gray w3-hide-large w3-xlarge" onclick="w3_open()"></i>
+                <span id="intro-area" class="w3-hide">Projects Panel</span></p>
+              </div>
+              
+              <header class="w3-container w3-black" style="padding:64px 32px">
+                <h1 class="w3-xxxlarge">JEC Linux User Group</h1>
+                <h3>Projects Panel</h3>
+              </header>
+
+              <div class="w3-container" style="padding:32px">
+                <!-- Main content here -->
+                 
+                <h2>Hello User! Welcome to the Projects Panel. You can view your tasks here.</h2>
+                <br>
+                
+                <div class="w3-border w3-container">
+                    <h3>Technical Team</h3>
+                    <ol>
+                        <li>
+                            <p>Prepare a personal portfolio using plain HTML, CSS and JS.</p>
+                            <input type="url" name="tech-1" class="w3-input w3-border" placeholder="GitHub Pages Link"><br>
+                            <input type="submit" class="w3-button w3-green" value="Submit">
+                        </li>
+                        <li>
+                            <p>Make a Python program using pandas to fetch the data in a CSV file and print it in the console.</p>
+                            <input type="url" name="tech-1" class="w3-input w3-border" placeholder="GitHub Repo Link"><br>
+                            <input type="submit" class="w3-button w3-green" value="Submit">
+                        </li>
+                    </ol>
+                </div>
+                <hr>
+                <div class="w3-border w3-container">
+                    <h3>Management Team</h3>
+                    <ol>
+                        <li>
+                            <p>Prepare a proposal for getting sponsors for a technical event for the club.</p>
+                            <input type="url" name="tech-1" class="w3-input w3-border" placeholder="Drive File Link"><br>
+                            <input type="submit" class="w3-button w3-green" value="Submit">
+                        </li>
+                        <li>
+                            <p>Write a report to be published in the club's blog for a hackathon that was arranged by the club.</p>
+                            <input type="url" name="tech-1" class="w3-input w3-border" placeholder="Drive File Link"><br>
+                            <input type="submit" class="w3-button w3-green" value="Submit">
+                        </li>
+                    </ol>
+                </div>
+
+
+              </div>
+              <footer class="w3-container w3-black" style="padding:32px">
+                <p>Designed by the Technical Team @ JLUG</p>
+                <p>&copy;2024 JLUG</p>
+              </footer>
+
+          </div>
+
+
+          <script>
+                // Open and close the sidebar on medium and small screens
+                function w3_open() {
+                document.getElementById("navigation").style.display = "block";
+                document.getElementById("navigation").style.display = "block";
+                }
+                
+                function w3_close() {
+                document.getElementById("navigation").style.display = "none";
+                document.getElementById("navigation").style.display = "none";
+                }
+                
+                // Change style of top container on scroll
+                window.onscroll = function() {myFunction()};
+                function myFunction() {
+                if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                    document.getElementById("top-area").classList.add("w3-card-4", "w3-animate-opacity");
+                    document.getElementById("intro-area").classList.add("w3-show-inline-block");
+                } else {
+                    document.getElementById("intro-area").classList.remove("w3-show-inline-block");
+                    document.getElementById("top-area").classList.remove("w3-card-4", "w3-animate-opacity");
+                }
+                }
+                
+            </script>
+
+    </body>
+</html>

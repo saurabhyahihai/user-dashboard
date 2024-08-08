@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Edit Profile | JLUG</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body {font-family: "Roboto", sans-serif}
+                .w3-bar-block .w3-bar-item {
+                padding: 16px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="w3-sidebar w3-bar-block w3-collapse w3-animate-left w3-card" style="z-index:3;width:250px;" id="navigation">
+            <a class="w3-bar-item w3-border-bottom w3-large" href="#"><img src="lib/jlug.jpg" style="width:100%;"></a>
+            <a class="w3-bar-item w3-button w3-hide-large w3-large" href="javascript:void(0)" onclick="w3_close()">Close <i class="fa fa-remove"></i></a>
+            <a class="w3-bar-item w3-button" href="index.html">Home</a>
+            <a class="w3-bar-item w3-button w3-light-gray" href="#">Profile</a>
+            <a class="w3-bar-item w3-button" href="projects.html">Projects</a>
+            <a class="w3-bar-item w3-button" href="status.html">Status</a>
+            <a class="w3-bar-item w3-button" href="help.html">Help</a>
+          </nav>
+
+          <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="nav_close()" style="cursor:pointer" id="overlay"></div>
+
+          <div class="w3-main" style="margin-left:250px;">
+
+            <div id="top-area" class="w3-container w3-top w3-large w3-black">
+                <p><i class="fa fa-bars w3-button w3-light-gray w3-hide-large w3-xlarge" onclick="w3_open()"></i>
+                <span id="intro-area" class="w3-hide">Edit Profile</span></p>
+              </div>
+              
+              <header class="w3-container w3-black" style="padding:64px 32px">
+                <h1 class="w3-xxxlarge">JEC Linux User Group</h1>
+                <h3>Edit Profile</h3>
+              </header>
+
+              <div class="w3-container" style="padding:32px">
+                <!-- Main content here -->
+                 
+                <h2>Hello User! You can edit your profile here.</h2><br>
+
+                <h4>Your details:</h4>
+
+                <form>
+                    <input name="name" class="w3-input w3-border" type="text" placeholder="Full Name"><br>
+                    <input name="username" class="w3-input w3-border" type="text" placeholder="Username"><br>
+                    <input name="email" class="w3-input w3-border" type="email" placeholder="Email"><br>
+                    <input name="phone" class="w3-input w3-border" type="number" placeholder="Phone Number"><br>
+                    <select name="gender" class="w3-input w3-border">
+                        <option disabled selected>Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select><br>
+                    <select name="department" class="w3-input w3-border">
+                        <option disabled selected>Department</option>
+                        <option value="EC">Electronics and Tele Communication</option>
+                        <option value="CSE">Computer Science</option>
+                        <option value="IT">Information Technology</option>
+                        <option value="EE">Electrical Engineering</option>
+                        <option value="AIDS">Artificial Intelligence and Data Science</option>
+                        <option value="MT">Mechatronics</option>
+                        <option value="EE">Electrical</option>
+                        <option value="ME">Mechanical</option>
+                        <option value="CE">Civil</option>
+                        <option value="IP">Industrial Production</option>
+                    </select><br>
+                    <select name="semester" class="w3-input w3-border">
+                        <option disabled selected>Semester</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select><br>
+                    <span>Profile Picture: </span><input type="file" name="pp"><br><br>
+                    <textarea style="height: 80px; width: 100%;" maxlength="300" placeholder="About (in max 300 characters)"></textarea><br><br>
+                    <span>Teams Interested:</span><br>
+                    <input type="checkbox" name="teams" value="technical" class="w3-check">
+                    <label>Technical Team</label><br>
+                    <input type="checkbox" name="teams" value="content" class="w3-check">
+                    <label>Content Team</label><br>
+                    <input type="checkbox" name="teams" value="management" class="w3-check">
+                    <label>Management Team</label><br>
+                    <input type="checkbox" name="teams" value="administration" class="w3-check">
+                    <label>Video Editing Team</label><br>
+                    <input type="checkbox" name="teams" value="graphics" class="w3-check">
+                    <label>Graphics Team</label><br><br>
+                    
+                    <input type="submit" class="w3-button w3-black" value="Submit">
+
+                </form>
+
+                
+
+
+              </div>
+              <footer class="w3-container w3-black" style="padding:32px">
+                <p>Designed by the Technical Team @ JLUG</p>
+                <p>&copy;2024 JLUG</p>
+              </footer>
+
+          </div>
+
+
+          <script>
+                // Open and close the sidebar on medium and small screens
+                function w3_open() {
+                document.getElementById("navigation").style.display = "block";
+                document.getElementById("navigation").style.display = "block";
+                }
+                
+                function w3_close() {
+                document.getElementById("navigation").style.display = "none";
+                document.getElementById("navigation").style.display = "none";
+                }
+                
+                // Change style of top container on scroll
+                window.onscroll = function() {myFunction()};
+                function myFunction() {
+                if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                    document.getElementById("top-area").classList.add("w3-card-4", "w3-animate-opacity");
+                    document.getElementById("intro-area").classList.add("w3-show-inline-block");
+                } else {
+                    document.getElementById("intro-area").classList.remove("w3-show-inline-block");
+                    document.getElementById("top-area").classList.remove("w3-card-4", "w3-animate-opacity");
+                }
+                }
+                
+            </script>
+
+    </body>
+</html>
